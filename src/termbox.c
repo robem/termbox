@@ -117,6 +117,8 @@ int tb_init(void)
 	bytebuffer_puts(&output_buffer, funcs[T_ENTER_CA]);
 	bytebuffer_puts(&output_buffer, funcs[T_ENTER_KEYPAD]);
 	bytebuffer_puts(&output_buffer, funcs[T_HIDE_CURSOR]);
+
+       tb_set_clear_attributes(TB_WHITE, TB_BLACK);
 	send_clear();
 
 	update_term_size();
